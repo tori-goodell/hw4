@@ -1,11 +1,13 @@
-<h1>My Places</h1>
+  <div class="display-6 mb-4">
+    <h1>My Places</h1>
+  </div>
 
-<ul>
-  <% for place in @places %>
-    <li><a href="/places/<%= place["id"] %>"><%= place["name"] %></a></li>
-  <% end %>
-</ul>
+  <div>
+    <a class="btn btn-primary mb-4" href="/places/new">New place</a>
+  </div>
 
-<p>
-  <a href="/places/new">New place</a>
-</p>
+  <ul class="list-group list-group-flush">
+    <% for place in @places %>
+      <li class="list-group-item"><a href="/places/<%= place["id"] %>"><%= place["name"] %></a></li>
+    <% end %>
+  </ul>
